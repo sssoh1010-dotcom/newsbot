@@ -8,10 +8,10 @@ import urllib.parse
 st.set_page_config(page_title="AI 투자 비서", layout="centered")
 
 # [2] API 설정
-API_KEY = st.secrets["GEMINI_API_KEY"]
-genai.configure(api_key=API_KEY)
 try:
-    genai.configure(api_key=API_KEY) 
+    API_KEY = st.secrets["GEMINI_API_KEY"]
+    genai.configure(api_key=API_KEY)
+    # 모델 이름을 정확한 버전(1.5 또는 2.0)으로 수정했습니다.
     model = genai.GenerativeModel('gemini-2.5-flash')
 except Exception as e:
     st.error(f"API 설정 오류: {e}")

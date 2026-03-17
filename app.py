@@ -5,7 +5,7 @@ import google.generativeai as genai
 import urllib.parse
 
 # [1] 페이지 설정
-st.set_page_config(page_title="AI 투자 비서", layout="centered")
+st.set_page_config(page_title="마이 리포트", layout="centered")
 
 # [2] API 설정
 try:

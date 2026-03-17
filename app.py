@@ -39,7 +39,7 @@ def display_news_links(news_list):
                 st.markdown(f"- [{n.title[:40]}...]({n.link})")
 
 # [5] 메인 UI
-st.title("📈 AI 투자 비서")
+st.title("📈마이 리포트")
 tab1, tab2, tab3, tab4 = st.tabs(["종합", "테마", "심층", "⚡급상승"])
 
 # --- 탭 1: 종합 리포트 ---
@@ -100,7 +100,7 @@ with tab2:
 
 # --- 탭 3: 중요 뉴스 3선 (리포트 내 링크 포함) ---
 with tab3:
-    st.subheader("🕵️ AI 선정 중요 뉴스 3선")
+    st.subheader("🕵️ 중요 뉴스 3선")
     if st.button("AI 뉴스 큐레이션", use_container_width=True, key="btn_t3"):
         with st.spinner("최적의 뉴스 선정 중..."):
             news = get_filtered_news("주식 시장 핵심 이슈", 24)

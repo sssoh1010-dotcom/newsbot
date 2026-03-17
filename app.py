@@ -8,7 +8,8 @@ import urllib.parse
 st.set_page_config(page_title="AI 투자 비서", layout="centered")
 
 # [2] API 설정
-API_KEY = "AIzaSyCTczuMEE9PCofZD-xQBaqWhVCSJqyTLcI"
+API_KEY = st.secrets["GEMINI_API_KEY"]
+genai.configure(api_key=API_KEY)
 try:
     genai.configure(api_key=API_KEY) 
     model = genai.GenerativeModel('gemini-2.5-flash')
